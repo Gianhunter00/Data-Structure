@@ -148,38 +148,38 @@ int main()
     list_append_item(&my_doubly_linked_list->head, "sono");
     list_append_item(&my_doubly_linked_list->head, "Andrea");
     list_append_item(&my_doubly_linked_list->head, "!!!!");
-    printf("-------------END INSERT-------------\n");
+    printf("-------------END INSERT-------------\n\n");
 
     printf("---------------PRINT----------------\n");
     list_print(my_doubly_linked_list->head, my_doubly_linked_list->data_to_val);
-    printf("-------------END PRINT--------------\n");
+    printf("-------------END PRINT--------------\n\n");
 
-    printf("---------------REMOVE---------------\n");
+    printf("---------------REMOVE---------------\n\n");
     list_remove(&my_doubly_linked_list->head, 1);
 
     printf("---------------PRINT----------------\n");
     list_print(my_doubly_linked_list->head, my_doubly_linked_list->data_to_val);
-    printf("-------------END PRINT--------------\n");
+    printf("-------------END PRINT--------------\n\n");
 
-    printf("---------INSERT WITH INDEX----------\n");
+    printf("---------INSERT WITH INDEX----------\n\n");
     list_insert(my_doubly_linked_list, 1, "Giovanni");
 
-    printf("------------INSERT AFTER------------\n");
+    printf("------------INSERT AFTER------------\n\n");
     list_insert_after(my_doubly_linked_list, "Giovanni", "Rana");
 
-    printf("------------INSERT BEFORE-----------\n");
+    printf("------------INSERT BEFORE-----------\n\n");
     list_insert_before(my_doubly_linked_list, "come", ",");
 
     printf("---------------PRINT----------------\n");
     list_print(my_doubly_linked_list->head, my_doubly_linked_list->data_to_val);
-    printf("-------------END PRINT--------------\n");
+    printf("-------------END PRINT--------------\n\n");
 
     printf("---------------SHUFFLE--------------\n");
     list_shuffle(&my_doubly_linked_list->head);
-    printf("-------------END SHUFFLE------------\n");
+    printf("-------------END SHUFFLE------------\n\n");
 
     printf("---------------PRINT----------------\n");
     list_print(my_doubly_linked_list->head, my_doubly_linked_list->data_to_val);
-    printf("-------------END PRINT--------------\n");
+    printf("-------------END PRINT--------------\n\n");
     return 0;
 }

@@ -267,7 +267,7 @@ int main()
     dictionary_insert_int(&my_dictionary_list_int, "cdwen", 9);
     dictionary_insert_int(&my_dictionary_list_int, "gtwth", 10);
     dictionary_insert_int(&my_dictionary_list_int, "CIAO", 11);
-    printf("-------------END INSERT-------------\n");
+    printf("-------------END INSERT-------------\n\n");
     // insert float
     printf("-------------INSERT FLOAT------------\n");
     dictionary_insert_float(&my_dictionary_list_float, "A", 5.0);
@@ -281,58 +281,58 @@ int main()
     dictionary_insert_float(&my_dictionary_list_float, "I", 5.8);
     dictionary_insert_float(&my_dictionary_list_float, "L", 5.9);
     dictionary_insert_float(&my_dictionary_list_float, "M", 6.0);
-    printf("-------------END INSERT-------------\n");
+    printf("-------------END INSERT-------------\n\n");
     // insert double
     printf("------------INSERT DOUBLE------------\n");
     dictionary_insert_double(&my_dictionary_list_double, "AB", 5.22);
     dictionary_insert_double(&my_dictionary_list_double, "ABC", 6.22);
-    printf("-------------END INSERT-------------\n");
+    printf("-------------END INSERT-------------\n\n");
     // insert string
     printf("------------INSERT STRING------------\n");
     dictionary_insert_string(&my_dictionary_list_string, "AB", "Pitagora");
     dictionary_insert_string(&my_dictionary_list_string, "ABC", "Alfabeto");
-    printf("-------------END INSERT-------------\n");
+    printf("-------------END INSERT-------------\n\n");
     // search
     printf("---------------SEARCH---------------\n");
     set_node_t *search_node_double_AB = dictionary_search(my_dictionary_list_double, "AB");
     print_node(my_dictionary_list_double, search_node_double_AB);
     set_node_t *search_node_string_ABC = dictionary_search(my_dictionary_list_string, "ABC");
     print_node(my_dictionary_list_string, search_node_string_ABC);
-    printf("-------------END SEARCH-------------\n");
+    printf("-------------END SEARCH-------------\n\n");
     // remove
     printf("---------------REMOVE---------------\n");
     dictionary_removal(my_dictionary_list_int, "CIAO");
     dictionary_removal(my_dictionary_list_float, "M");
-    printf("-------------END REMOVE-------------\n");
+    printf("-------------END REMOVE-------------\n\n");
     // research
     printf("---------RE-SEARCH REMOVED----------\n");
     set_node_t *search_node_int_CIAO = dictionary_search(my_dictionary_list_int, "CIAO");
     print_node(my_dictionary_list_int, search_node_int_CIAO);
     set_node_t *search_node_float_M = dictionary_search(my_dictionary_list_float, "M");
     print_node(my_dictionary_list_float, search_node_float_M);
-    printf("--------END RE-SEARCH REMOVED--------\n");
+    printf("--------END RE-SEARCH REMOVED--------\n\n");
     // print size
     printf("----------PRINT HASHMAP SIZE---------\n");
     printf("INT DICTIONARY:\n-Size: %lld\n", my_dictionary_list_int->hashmap_size);
     printf("FLOAT DICTIONARY:\n-Size: %lld\n", my_dictionary_list_float->hashmap_size);
     printf("DOUBLE DICTIONARY:\n-Size: %lld\n", my_dictionary_list_double->hashmap_size);
     printf("STRING DICTIONARY:\n-Size: %lld\n", my_dictionary_list_string->hashmap_size);
-    printf("--------END PRINT HASHMAP SIZE-------\n");
+    printf("--------END PRINT HASHMAP SIZE-------\n\n");
     // print int
     printf("---------PRINT DICTIONARY INT--------\n");
     print_dictionary(my_dictionary_list_int);
-    printf("------END PRINT DICTIONARY INT-------\n");
+    printf("------END PRINT DICTIONARY INT-------\n\n");
     // print float
     printf("--------PRINT DICTIONARY FLOAT-------\n");
     print_dictionary(my_dictionary_list_float);
-    printf("-----END PRINT DICTIONARY FLOAT------\n");
+    printf("-----END PRINT DICTIONARY FLOAT------\n\n");
     // print double
     printf("-------PRINT DICTIONARY DOUBLE-------\n");
     print_dictionary(my_dictionary_list_double);
-    printf("-----END PRINT DICTIONARY DOUBLE-----\n");
+    printf("-----END PRINT DICTIONARY DOUBLE-----\n\n");
     // print string
     printf("--------PRINT DICTIONARY STRING------\n");
     print_dictionary(my_dictionary_list_string);
-    printf("-----END PRINT DICTIONARY STRING-----\n");
+    printf("-----END PRINT DICTIONARY STRING-----\n\n");
     return 0;
 }

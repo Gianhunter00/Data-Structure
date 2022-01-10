@@ -166,24 +166,24 @@ int main()
     list_append_item(&my_linked_list, "stai");
     list_append_item(&my_linked_list, "!!!");
     list_append_item(&my_linked_list, "!!!!");
-    printf("-------------END INSERT-------------\n");
+    printf("-------------END INSERT-------------\n\n");
 
     printf("---------------PRINT----------------\n");
     list_print(my_linked_list);
-    printf("-------------END PRINT--------------\n");
+    printf("-------------END PRINT--------------\n\n");
 
-    printf("---------------REMOVE---------------\n");
+    printf("---------------REMOVE---------------\n\n");
     list_remove(my_linked_list, 5);
 
     printf("---------------PRINT----------------\n");
     list_print(my_linked_list);
-    printf("-------------END PRINT--------------\n");
+    printf("-------------END PRINT--------------\n\n");
 
-    printf("---------------REVERSE--------------\n");
+    printf("---------------REVERSE--------------\n\n");
     string_item_reverse(&my_linked_list);
     //printf("-------------END REVERSE------------\n");
     
     printf("---------------PRINT----------------\n");
     list_print(my_linked_list);
-    printf("-------------END PRINT--------------\n");
+    printf("-------------END PRINT--------------\n\n");
 }

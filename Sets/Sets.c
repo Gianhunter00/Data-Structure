@@ -222,36 +222,36 @@ int main()
     set_insert(my_sets_list, "ABC", 2);
     set_insert(my_sets_list, "ABC", 1);
     set_insert(my_sets_list, "ABCD", 2);
-    printf("-------------END INSERT-------------\n");
+    printf("-------------END INSERT-------------\n\n");
     // length
     printf("---------------LENGTH---------------\n");
     printf("LENGTH: %lld\n", list_len(set_search(my_sets_list, "AB", 2)));
-    printf("-------------END LENGTH-------------\n");
+    printf("-------------END LENGTH-------------\n\n");
     // search
     printf("---------------SEARCH---------------\n");
     list_node_t *search_node_AB = set_search(my_sets_list, "AB", 2);
     print_search(search_node_AB);
     list_node_t *search_node_ABC = set_search(my_sets_list, "ABC", 2);
     print_search(search_node_ABC);
-    printf("-------------END SEARCH-------------\n");
+    printf("-------------END SEARCH-------------\n\n");
     // remove
     printf("---------------REMOVE---------------\n");
     // set_removal(my_sets_list, "ABC", 2);
-    printf("-------------END REMOVE-------------\n");
+    printf("-------------END REMOVE-------------\n\n");
     // re-print length
     printf("---------------LENGTH---------------\n");
     printf("LENGTH: %lld\n", list_len(set_search(my_sets_list, "AB", 2)));
-    printf("-------------END LENGTH-------------\n");
+    printf("-------------END LENGTH-------------\n\n");
     // research
     printf("---------RE-SEARCH REMOVED----------\n");
     list_node_t *search_node_ABC2 = set_search(my_sets_list, "ABC", 2);
     print_search(search_node_ABC2);
-    printf("--------END RE-SEARCH REMOVED--------\n");
+    printf("--------END RE-SEARCH REMOVED--------\n\n");
     // search further
     printf("-------SEARCH NEXT OF REMOVED--------\n");
     list_node_t *search_node_ABCD = set_search(my_sets_list, "ABCD", 2);
     print_search(search_node_ABCD);
-    printf("-----END SEARCH NEXT OF REMOVED------\n");
+    printf("-----END SEARCH NEXT OF REMOVED------\n\n");
 
     // //shuffle work but after shuffling index will be different from the hashed one
     // printf("---------------SHUFFLE--------------\n");
@@ -262,18 +262,17 @@ int main()
     // print from first in line
     printf("------------PRINT FIRST-------------\n");
     list_print(set_search(my_sets_list, "AB", 2), my_sets_list->data_to_key);
-    printf("-----------END OLD PRINT------------\n");
+    printf("-----------END OLD PRINT------------\n\n");
 
     // list remove
-    // removing first object won't work cause the index of the second will be put inside the first index
     size_t hash = djb33x_hash("AB", 2);
     size_t index = hash % my_sets_list->hashmap_size;
     printf("------------REMOVE LIST-------------\n");
     list_remove(&my_sets_list->nodes[index], 0);
-    printf("----------END REMOVE LIST-----------\n");
+    printf("----------END REMOVE LIST-----------\n\n");
 
     printf("------------PRINT FIRST-------------\n");
     list_print(set_search(my_sets_list, "ABC", 2), my_sets_list->data_to_key);
-    printf("-----------END OLD PRINT------------\n");
+    printf("-----------END OLD PRINT------------\n\n");
     return 0;
 }
